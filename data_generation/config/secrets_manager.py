@@ -100,7 +100,7 @@ class SecureAPIKeyManager:
     def validate_all_keys(self) -> Dict[str, bool]:
         """Validate all required API keys are available."""
         required_keys = {
-            "GEMINI_API_KEY": "Gemini 2.5 Flash for generation"
+            "GEMINI_API_KEY": "Gemini 2.5 Pro for generation"
         }
         
         results = {}

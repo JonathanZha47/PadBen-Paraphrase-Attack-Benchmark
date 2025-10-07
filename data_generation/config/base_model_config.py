@@ -79,11 +79,11 @@ def create_gemini_flash_config(
     max_tokens: int = 200,
     top_p: float = 0.9
 ) -> LLMModelConfig:
-    """Create Gemini 2.5 Flash configuration for Type 2 generation."""
+    """Create Gemini 2.5 Pro configuration for Type 2 generation."""
     return LLMModelConfig(
-        name="Gemini 2.5 Flash",
+        name="Gemini 2.5 Pro",
         provider="gemini",
-        model_id="gemini-2.5-flash",
+        model_id="gemini-2.5-pro",
         api_key_env="GEMINI_API_KEY",
         api_base="https://generativelanguage.googleapis.com/v1beta",
         temperature=temperature,

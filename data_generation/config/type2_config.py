@@ -5,7 +5,7 @@ Configuration for LLM-generated text (Type 2) using two methods:
 1. Sentence completion method
 2. Question-answer method
 
-Only uses gemini-2.5-flash as specified.
+Only uses gemini-2.5-pro as specified.
 """
 
 import logging
@@ -26,7 +26,7 @@ class Type2GenerationMethod(Enum):
 class Type2GenerationConfig:
     """Enhanced configuration with strict output formatting."""
     
-    # Primary model: Only Gemini 2.5 Flash
+    # Primary model: Only Gemini 2.5 Pro
     primary_model: LLMModelConfig = field(default_factory=lambda: create_gemini_flash_config(
         temperature=0.7,
         max_tokens=200,
@@ -184,8 +184,8 @@ def validate_type2_config(config: Type2GenerationConfig) -> bool:
             logger.error(f"Type 2 must use Gemini provider, got: {config.primary_model.provider}")
             return False
         
-        if config.primary_model.model_id != "gemini-2.5-flash":
-            logger.error(f"Type 2 must use gemini-2.5-flash model, got: {config.primary_model.model_id}")
+        if config.primary_model.model_id != "gemini-2.5-pro":
+            logger.error(f"Type 2 must use gemini-2.5-pro model, got: {config.primary_model.model_id}")
             return False
         
         # Validate provider configuration

@@ -324,10 +324,13 @@ class SemanticParaphraseExperiment:
 
 def main():
     """Main execution function."""
-    # Configuration - Using Novitas AI (working provider)
+    # Configuration - Get API key from environment variables
     data_path = "/Users/jonathanzha/Desktop/PADBen/data/test/final_generated_data.json"
-    api_key = "sk_UAor5zd9GsqksXircDQutvoSK1tWGTnW407fV8tIdMA"
-    base_url = "https://api.novita.ai/openai"
+    api_key = os.getenv("OPENAI_API_KEY")
+    base_url = os.getenv("OPENAI_BASE_URL", "https://api.probex.top/v1")
+    
+    if not api_key:
+        raise ValueError("OPENAI_API_KEY environment variable is required")
     
     # Initialize experiment
     experiment = SemanticParaphraseExperiment(data_path, api_key, base_url)
