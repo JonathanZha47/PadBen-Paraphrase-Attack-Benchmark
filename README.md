@@ -26,6 +26,54 @@ PadBen-Paraphrase-Attack-Benchmark/
 └── README.md                       # This file
 ```
 
+## Benchmark Usage
+
+### Hugging Face Dataset
+
+- **Repository**: `JonathanZha/PADBen`
+- **Dataset scope**: 46 JSON files, 486 990 samples (30× expansion over base data); MIT license; tags `ai-detection`, `paraphrase-detection`, `text-classification`, `benchmark`
+- **Research focus**: Five questions spanning paraphrase source attribution, authorship detection, AI laundering, paraphrase depth, and deep attack detection
+
+#### Config Groups
+
+- **Sentence pair**: `sentence-pair-task1` … `sentence-pair-task5`
+- **Single sentence – exhaustive**: `exhaustive-task1` … `exhaustive-task5`
+- **Single sentence – sampling ratios**:
+  - 30-70 split: `sampling-30-70-task1` … `sampling-30-70-task5`
+  - 50-50 split: `sampling-50-50-task1` … `sampling-50-50-task5`
+  - 80-20 split: `sampling-80-20-task1` … `sampling-80-20-task5`
+
+Each config maps to the corresponding JSON file in `data/task_data/tasks/` (e.g., `sentence-pair-task3` → `sentence-pair/task3/task3_ai_text_laundering_detection_sentence_pair.json`).
+
+#### Record Schemas
+
+- Sentence pair rows expose `idx`, `sentence_pair`, `label_pair`
+- Single sentence rows expose `idx`, `text`, `label`
+
+```python
+from datasets import load_dataset, get_dataset_config_names
+
+dataset = load_dataset("JonathanZha/PADBen", "sentence-pair-task1")
+
+for sample in dataset["train"][:2]:
+    print(sample["sentence_pair"], sample["label_pair"])
+
+configs = get_dataset_config_names("JonathanZha/PADBen")
+print(f"Available configurations ({len(configs)}):")
+for name in configs:
+    print(f"  - {name}")
+```
+
+#### Task Reference
+
+- **Task 1**: Paraphrase source attribution (Type3 vs Type4)
+- **Task 2**: General text authorship (Type1 vs Type2)
+- **Task 3**: AI text laundering (Type4 vs Type5-1st)
+- **Task 4**: Iterative paraphrase depth (Type5-1st vs Type5-3rd)
+- **Task 5**: Original vs deep paraphrase attack (Type1 vs Type5-3rd)
+
+Sampling configs mirror these five tasks with class ratios 30-70, 50-50, and 80-20 across the single-sentence datasets.
+
 ## 🚀 Quick Start
 
 ### 1. Environment Setup
