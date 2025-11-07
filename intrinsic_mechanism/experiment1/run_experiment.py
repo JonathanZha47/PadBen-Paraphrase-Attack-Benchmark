@@ -82,8 +82,8 @@ def check_api_credentials() -> bool:
         True if credentials are available, False otherwise
     """
     # Using hardcoded Novitas AI credentials
-    api_key = "sk_UAor5zd9GsqksXircDQutvoSK1tWGTnW407fV8tIdMA"
-    base_url = "https://api.novita.ai/openai"
+    api_key = #TODO: Add API key
+    base_url = #TODO: Add base URL
     
     if not api_key:
         logger.error("Novitas AI API key not configured")
