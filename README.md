@@ -30,7 +30,6 @@ PadBen-Paraphrase-Attack-Benchmark/
 
 ### Hugging Face Dataset
 
-- **Repository**: `JonathanZha/PADBen`
 - **Dataset scope**: 46 JSON files, 486 990 samples (30× expansion over base data); MIT license; tags `ai-detection`, `paraphrase-detection`, `text-classification`, `benchmark`
 - **Research focus**: Five questions spanning paraphrase source attribution, authorship detection, AI laundering, paraphrase depth, and deep attack detection
 
