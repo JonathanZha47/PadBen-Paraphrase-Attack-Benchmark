@@ -260,6 +260,20 @@ Utilities for preparing and formatting data for different task types.
 ### Data Documentation
 
 - **[Data Documentation](data/README.md)**: Generated benchmark data and task-specific datasets
+- 
+## 📝 Citation
+If you find our work useful, please cite: 
+```
+@misc{zha2025padbencomprehensivebenchmarkevaluating,
+      title={PADBen: A Comprehensive Benchmark for Evaluating AI Text Detectors Against Paraphrase Attacks}, 
+      author={Yiwei Zha and Rui Min and Shanu Sushmita},
+      year={2025},
+      eprint={2511.00416},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2511.00416}, 
+}
+```
 
 ## 📄 License
 
