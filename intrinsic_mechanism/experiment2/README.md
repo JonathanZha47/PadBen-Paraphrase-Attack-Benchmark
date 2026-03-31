@@ -6,7 +6,7 @@ This experiment analyzes how paraphrased text deviates from original text in sem
 
 The experiment conducts the following steps:
 
-1. **Data Extraction**: Extracts 100 samples each of type1 (human original text) and type2 (LLM generated text) from the dataset
+1. **Data Extraction**: Extracts 1000 samples each of type1 (human original text) and type2 (LLM generated text) from the dataset
 2. **Iterative Paraphrasing**: Performs 5 iterations of paraphrasing using Qwen2.5-3B-Instruct model
 3. **Feature Extraction**: Captures hidden states and embeddings (BGE-M3) at each iteration
 4. **PCA Analysis**: Performs Principal Component Analysis on both hidden states and embeddings
@@ -122,7 +122,7 @@ experiment = SemanticSpaceExperiment(
     data_path="/path/to/data.json",
     output_dir="./output",
     max_iterations=5,
-    num_samples=100
+    num_samples=1000
 )
 
 # Run the complete experiment
@@ -274,19 +274,6 @@ The experiment produces several types of analysis:
 1. Add new analysis functions to `utils.py`
 2. Integrate with main experiment pipeline
 3. Update visualization accordingly
-
-## Citation
-
-If you use this experiment in your research, please cite:
-
-```bibtex
-@misc{semantic_space_experiment_2025,
-  title={Semantic Space Analysis of Iterative Paraphrasing},
-  author={PADBen Research Team},
-  year={2025},
-  howpublished={\\url{https://github.com/your-repo/PADBen}}
-}
-```
 
 ## License
 
