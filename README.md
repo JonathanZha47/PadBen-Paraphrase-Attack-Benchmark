@@ -6,11 +6,12 @@ A Comprehensive Benchmark for Evaluating AI Text Detectors Against Paraphrase At
 
 PadBen (Paraphrase Attack Detection Benchmark) is a comprehensive benchmark designed to evaluate the robustness of AI text detectors against various types of paraphrase attacks. The benchmark includes multiple text types, evaluation methods, and quality assurance tools to provide a thorough assessment of text detection systems.
 
-## 📄 Supplementary Appendix (ICANN 2026)
+## 📄 ICANN 2026 Camera-Ready Paper
 
-The camera-ready proceedings version includes the main paper only (≤12 pages). The full supplementary appendix (Appendices A–F) is published here:
+The Springer proceedings version (main paper, ≤12 pages) and supplementary appendix are published separately:
 
-- **PDF:** [`docs/padben_icann_appendix.pdf`](docs/padben_icann_appendix.pdf)
+- **Camera-ready paper (PDF):** [`docs/padben_icann.pdf`](docs/padben_icann.pdf)
+- **Supplementary appendix (PDF):** [`docs/padben_icann_appendix.pdf`](docs/padben_icann_appendix.pdf)
 - **LaTeX source:** [`docs/latex/`](docs/latex/)
 
 See [`docs/README.md`](docs/README.md) for the appendix structure and rebuild instructions.

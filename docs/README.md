@@ -1,13 +1,14 @@
-# PADBen Supplementary Appendix
+# PADBen ICANN 2026 Papers
 
-This directory contains the supplementary appendix for the ICANN 2026 camera-ready paper *PADBen: A Comprehensive Benchmark for Evaluating AI Text Detectors Against Paraphrase Attacks*.
+This directory contains the camera-ready proceedings paper and supplementary appendix for *PADBen: A Comprehensive Benchmark for Evaluating AI Text Detectors Against Paraphrase Attacks* (ICANN 2026).
 
 ## Files
 
 | File | Description |
 |------|-------------|
-| [`padben_icann_appendix.pdf`](padben_icann_appendix.pdf) | Compiled appendix PDF (Appendices A–F) |
-| [`latex/`](latex/) | LaTeX source to rebuild the appendix |
+| [`padben_icann.pdf`](padben_icann.pdf) | Camera-ready main paper (12 pages, Springer proceedings) |
+| [`padben_icann_appendix.pdf`](padben_icann_appendix.pdf) | Supplementary appendix PDF (Appendices A–F) |
+| [`latex/`](latex/) | LaTeX source to rebuild both documents |
 
 ## Appendix structure
 
